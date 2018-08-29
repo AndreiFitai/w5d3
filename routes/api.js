@@ -37,4 +37,8 @@ router.patch('/food/:index', (req, res) => {
     })
 })
 
+router.get('/food', (req, res) => {}) // list of foods
+
+router.get('/food/:index', (req, res) => {}) // just one food
+
 module.exports = router
