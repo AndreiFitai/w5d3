@@ -2,11 +2,11 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
 const foodSchema = new Schema({
-    // index: {
-    //     type: String,
-    //     required: true,
-    //     unique: true,
-    // },
+    index: {
+        type: Number,
+        required: true,
+        unique: true,
+    },
     title: { type: String, required: true },
     calories: { type: Number, required: true },
     type: {
