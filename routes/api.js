@@ -25,4 +25,16 @@ router.post('/food', (req, res) => {
         })
 })
 
+router.delete('/food/:index', (req, res) => {
+    Food.findOneAndRemove({ index: req.params.index }).then(() => {
+        res.send({ success: true })
+    })
+})
+
+router.patch('/food/:index', (req, res) => {
+    Food.findOneAndUpdate({ index: req.params.index }, req.body, { new: true }).then(updatedFood => {
+        res.send(updatedFood)
+    })
+})
+
 module.exports = router
